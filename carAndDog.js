@@ -65,16 +65,56 @@ var fiatParams = {
   mileage: 88000
 }
 
+var testParams= {
+  make: "Webville Motors",
+  model: "Test Car",
+  year: 2014,
+  color: "marine",
+  passengers: 2,
+  convertible: true,
+  miles: 21
+};
+
 var chevy = new Car(chevyParams);
 var cadi = new Car(cadiParams);
 var taxi = new Car(taxiParams);
 var fiat = new Car(fiatParams);
+var testCar = new Car(testParams);
 
-var cars = [chevy, cadi, taxi, fiat];
-
+var cars = [chevy, cadi, taxi, fiat, testCar];
+/*
 for (var i = 0; i < cars.length; i++){
   cars[i].start();
   cars[i].drive();
   cars[i].drive();
   cars[i].stop();
 }
+*/
+function Dog(name, breed, weight) {
+    this.name = name;
+    this.breed = breed;
+    this.weight = weight;
+    this.bark = function() {
+        if (this.weight > 25) {
+            alert(this.name + " says Woof!");
+        } else {
+            alert(this.name + " says Yip!");
+        }
+    };
+}
+
+var limoParams = {
+  make: "Webville Motors",
+  model: "limo",
+  year: 1983,
+  color: "black",
+  passengers: 12,
+  convertible: true,
+  mileage: 21120
+};
+
+var limo = new Car(limoParams);
+var limoDog = new Dog("Rhapsody In Blue", "Poodle", 40);
+
+console.log(limo.make + " " + limo.model + " is a " + typeof limo); 
+console.log(limoDog.name + " is a " + typeof limoDog);
