@@ -14,5 +14,9 @@ function Dog(name, breed, weight) {
 var fido = new Dog ("fido", "mixed", 38);
 fido.owner = "bob";
 delete fido.weight;
+fido.trust = function(person) {
+  return (person === "Bob");
+};
 
+var notBite = fido.trust("Bob");
 console.log(fido);
